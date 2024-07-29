@@ -1,0 +1,36 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="fries">
+        <br>
+        <br>
+
+        <h1>
+            <strong>Welcome!</strong>
+        </h1>
+         
+        <br>
+        <p class="future" align="justify">
+            This is an Ebay-like e-commerce website that give users the capability to make posts about auciton listings, place bids, add to a watchlist as well as makes comments on listings. 
+        </p>
+
+        <p class="future" align="justify">
+            Active Listings page is where users can make a bid for items that are being sold. 
+        </p>
+
+        <p class="future" align="justify">
+            The create listing page gives users the ability to upload a product that they want to sell.
+        </p>
+        <br>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'activelisting' %}" class="button">Active Listings</a><br>
+            <a href="{% url 'createlisting' %}" class="button">Create Listing</a><br>
+            <a href="{% url 'categories' %}" class="button">Categories</a><br>
+            <a href="{% url 'dashboard' %}" class="button">Dashboard</a><br>
+            <a href="{% url 'closedlisting' %}" class="button">Closed Listing</a>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

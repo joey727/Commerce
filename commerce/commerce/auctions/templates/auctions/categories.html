@@ -1,0 +1,24 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <br>
+    <div class="jumbotron text-center mx-2 mb-5">
+
+        <h2 class="card-title h2">CATEGORIES</h2>
+        <p class="my-4 h6">Select a Category to view Listings in that category.</p>
+        <br> <br>
+        <img src="../../static/auctions/img/forcategories.svg" alt="indeximage" style="height: 350px;" class="embed-responsive"> <br> <br> <br> 
+    
+        <div class="row d-flex justify-content-center">
+            
+            <div class="col-xl-7 pb-2">
+                <ul class="list-group">
+                    <a href=""><li class="list-group-item">Toys</li></a>
+                    <a href=""><li class="list-group-item">Electronics</li></a>
+                    <a href=""><li class="list-group-item">Accessories</li></a>
+                    <a href=""><li class="list-group-item">Books</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
